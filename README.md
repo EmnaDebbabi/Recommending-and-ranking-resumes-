@@ -13,7 +13,9 @@ According to IBM master plan methodology, a data science project begins with the
 <p align="center">
 <img src="/images/1.png" alt="Alt text" title="Optional title" style="display: block; margin: 0 auto; max-width: 50%">
 </p>
+
 #### BUSINESS UNDERSTANDING AND DATA ANALYTICS
+
 The first stage of the IBM master plan process is to understand what we want to accom-
 plish from a business prespective. Our organization may have competing objectives and
 
@@ -21,12 +23,15 @@ constraints that must be properly balanced. The goal of this stage of the proces
 uncover important factors that could influence the project outcome because neglecting
 this step can mean that a great deal of effort is put into producing the right answers to
 the wrong questions.
+
 ### BUSINESS OBJECTIVES
+
 In our project the business objectives that we will define are implementation of a recommendation and classification application for profiles of a Resumes database in order to speed up the HR recruitment process and to propose relevant resumes according to the profile sought by
 the recruitment manager. In other words, the creation of a recommendation system for the purpose of optimizing recruitment, that is to say providing the profile that matches the profile sought. The tool allows the filtering and classification of profiles according to the position requested (diplomas, skills, seniority, place of residence, etc.). This application allows increasing overall revenue by ensuring a gain in terms of search time and gain
 in terms of number of HR agents responsible for recruitment. Also we need a strategic dashboard that helps the HR manager to make strategic decisions.
 
 ### DATA SCIENCE OBJECTIVES
+
 The principal purpose of data science is to find patterns within data. It uses various
 statistical techniques to analyze and draw insights from the data. From data extraction,
 wrangling and pre-processing, a data scientist must scrutinize the data thoroughly. Then,
@@ -45,17 +50,22 @@ In this project our data science objectives are defined below:
 <li> Data cleaning </li>
 <li> Creation of models using AI / ML / DL </li>  
 </ul>
-Every project, regardless of its size, starts with business understanding, which lays the foundation for successful resolution of the business problem for that mastering well the first phase of our plan is essential to succeed our project, so first of all we defined our business and data science objectives. In the next chapter we will start the second phase which is data preparation.
+Every project, regardless of its size, starts with business understanding, which lays the foundation for successful resolution of the business problem for that mastering well the first phase of our plan is essential to succeed our project, so first of all we defined our business and data science objectives. In the next chapter we will start the second phase which is data preparation.</br>
+
 ### DATA COLLECTION AND DATA PREPARATION
+
 #### INTERNAL DATA
 ##### Data source description:
+
 We have a document-oriented database: MongoDB </br>
 Collection Name: databasebrute </br>
 Documents: 10,000 </br>
 Avg. Document size: 5.0 KB </br>
 Total Document size: 50.1 </br>
 We have at least 10,000 profiles from linkedIn. </br>
+
 ##### Data understanding and data preparation:
+
 The list of treatments performed:
 <ul type="circle" >
 <li> Transform the collection(10,000 json files) to a dataframe (shape : 10000,9)
@@ -123,7 +133,9 @@ otherwise.</li>
 date –degree_year <=2 years and 0 otherwise)</li> 
   <li> Replace “vide” in ‘Full_name’ column with the name that can be found in the ‘URL’
 column. </li>
+
 #### EXTERNAL DATA
+
 For external data we extracted information from Git Hub, Tweeter and Facebook. From GitHub:
 We have from the websites column links to GitHub, so we extract from it all skills which
 are used in projects and the percentage of appearance of every skill.</br>
@@ -145,7 +157,9 @@ Using ‘facebook_scraper’ library and ‘get_posts’ module to be exact, we 
 from publications of enterprises in order to find the most frequent words to find out the
 main activity sector of the company. This information will help us to know whether the
 candidate has worked in the same sector of activity requested or not. </br>
+
 #### DATA EXPLORATION
+
 Once we have prepared our dataset which contains all the numerical variables, we try to
 explore it better to extract more information.
 <p align="center">
@@ -191,7 +205,9 @@ The percentage of engineers that tend that change their position is low.
 </p>
 There is almost a balance between the candidates who have less than 500 Followers
 and those beyond the 500.
+
 #### MODELING
+
 Recommender systems are among the most popular applications of data science today.
 The recommendation is to guide the user in his exploration of the data so that he finds
 relevant information.
@@ -271,7 +287,9 @@ Cosine is widely used to measure the similarity between two vectors. Its calcula
 very efficient, especially for sparse vectors, as only the non-zero dimensions need to be
 considered.
 We used cosine similarity to obtain top 10 profiles closest to each of the 9 profiles proposed.
+
 #### EVALUATION
+
 To measure the capacity of our recommendation algorithm to predict correctly, we used
 the evaluation metrics specific to recommendation systems.
 A great recommender system makes both relevant and useful recommendations. Using a
@@ -293,7 +311,9 @@ If a recommender system is recommending lists of very similar items to single us
 the intra-list similarity will be high.</br>
 We did get a high score. So, our model is able to predict correctly and our application
 is ready to be deployed.
+
 #### DEPLOYMENT
+
 Once our data and our model are ready we can start the deployment phase. It is the last
 phase before feedback and the most important because it highlights the whole project.
 In this step, we enable users to use and to benefit from our application.
