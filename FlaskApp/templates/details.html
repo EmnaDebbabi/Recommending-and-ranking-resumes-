@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | General Form Elements</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/fontawesome-free/css/all.min.css') }}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/adminlte.min.css') }}">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- Ion Slider -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/ion-rangeslider/css/ion.rangeSlider.min.css') }}">
+  <!-- bootstrap slider -->
+  <link rel="stylesheet"
+    href="{{ url_for('static', filename='plugins/bootstrap-slider/css/bootstrap-slider.min.css') }}">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}
+  ">
+  <link rel="stylesheet"
+    href="  {{ url_for('static', filename='plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+</head>
+
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="../../index3.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="#" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <!-- SEARCH FORM -->
+      <form class="form-inline ml-3">
+        <div class="input-group input-group-sm">
+          <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-navbar" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Messages Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-comments"></i>
+            <span class="badge badge-danger navbar-badge">3</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+
+                <img src=" {{ url_for('static', filename='dist/img/user1-128x128.jpg') }}" alt="User Avatar"
+                  class="img-size-50 mr-3 img-circle">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Brad Diesel
+                    <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">Call me whenever you can...</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+
+                <img src="{{ url_for('static', filename='dist/img/user8-128x128.jpg') }}" alt="User Avatar"
+                  class="img-size-50 img-circle mr-3">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    John Pierce
+                    <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">I got your message bro</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+
+                <img src="{{ url_for('static', filename='dist/img/user3-128x128.jpg') }}" alt="User Avatar"
+                  class="img-size-50 img-circle mr-3">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Nora Silvester
+                    <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">The subject goes here</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+          </div>
+        </li>
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-warning navbar-badge">15</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-item dropdown-header">15 Notifications</span>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-envelope mr-2"></i> 4 new messages
+              <span class="float-right text-muted text-sm">3 mins</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-users mr-2"></i> 8 friend requests
+              <span class="float-right text-muted text-sm">12 hours</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-file mr-2"></i> 3 new reports
+              <span class="float-right text-muted text-sm">2 days</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+            <i class="fas fa-th-large"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="../../index3.html" class="brand-link">
+
+        <img src="{{ url_for('static', filename='dist/img/wevioo.png') }}" alt="AdminLTE Logo"
+          class="brand-image img-circle elevation-3" style="opacity: .8">
+          <span class="brand-text font-weight-light">W-sourcing</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+
+            <img src="{{ url_for('static', filename='dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
+              alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Alexander Pierce</a>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item has-treeview">
+              <a href="{{ url_for('index') }}" class="nav-link">
+                <i class="nav-icon fas fa fa-th-list"></i>
+                <p>
+                  List Candidats
+
+                </p>
+              </a>
+
+            </li>
+            <li class="nav-item">
+              <a href="{{url_for('addcandidat')}}" class="nav-link">
+                <i class="nav-icon fas fa-user-plus"></i>
+                <p>
+                  Nouveau Candidat
+
+                </p>
+              </a>
+            </li>
+
+            <li class="nav-item has-treeview">
+              <a href="{{url_for('home')}}" class="nav-link">
+                <i class="nav-icon fas fa-chart-pie"></i>
+                <p>
+                  Charts
+
+                </p>
+              </a>
+
+
+            </li>
+
+
+
+            </li>
+
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Details candidat</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Details</li>
+              </ol>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- left column -->
+            <div class="col-md-6">
+              <!-- general form elements -->
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Candidat</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form role="form">
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">URL</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="{{ item.url }}">
+                    </div>
+                    {%if item.BTS==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="BTS">
+                    </div>
+                    {% elif item.BTP==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="BTP">
+                    </div>
+                    {% elif item.Baccalaureat==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Baccalaureat">
+                    </div>
+                    {% elif item.Licence==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Licence">
+                    </div>
+                    {% elif item.Docteur==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Docteur">
+                    </div>
+                    {% elif item.Ingenieur==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Ingénieur">
+                    </div>
+                    {% elif item.Master==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Master">
+                    </div>
+                    {% elif item.Vide_Degree==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Sans diplome">
+                    </div>
+                    {% else %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Autre">
+                    </div>
+                    {% endif %}
+                    {%if item.Turnover==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Apte à changer de poste</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Oui">
+                    </div>
+                    {% else %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Apte à changer de poste</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Non">
+                    </div>
+                    {% endif %}
+                    {%if item.YoungGraduate==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Jeune Diplomé</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Oui">
+                    </div>
+                    {% else %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Jeune Diplomé</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Ancien Diplomé">
+                    </div>
+                    {% endif %}
+
+                    <div class="col-3">
+                      <label for="exampleInputEmail1">Nombre de projets</label>
+                      <input type="number" class="form-control" placeholder=".col-3"
+                        value="{{item['nobre de projets']}}">
+                    </div>
+                    {%if item.Gender==1 %}
+                    <div class="col-3">
+                      <label for="exampleInputEmail1">Sexe</label>
+                      <input type="text" class="form-control" placeholder=".col-3" value="Femme">
+                    </div>
+                    {% else %}
+                    <div class="col-3">
+                      <label for="exampleInputEmail1">Sexe</label>
+                      <input type="text" class="form-control" placeholder=".col-3" value="Homme">
+                    </div>
+                    {% endif %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Profil</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="{{item['profil']}}">
+
+                    </div>
+
+                    <div class="col-3">
+                      <label for="exampleInputEmail1">Score</label>
+                      <!--<input type="text" class="form-control" placeholder=".col-3" value="{{item['score']}}"> -->
+                      <input id="range_5" type="text" name="range_5" value="{{item['score']}}">
+                    </div>
+
+                    <div class="row margin">
+                      <div class="col-sm-6">
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <!-- /.card-body -->
+                </form>
+                <div class="card-footer">
+
+                  <button id="getsimilarity" class="btn btn-primary">Show Similarity</button>
+                </div>
+
+
+              </div>
+              <!-- /.card -->
+
+
+
+
+
+            </div>
+
+
+            <!-- right column -->
+            <div class="col-md-6">
+              <!-- general form elements disabled -->
+              <div class="card card-warning">
+                <div class="card-header">
+                  <h3 class="card-title">Les 10 plus proches</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body " style="overflow-x: auto">
+                  <form role="form">
+                    <div class="row">
+                      <table id="example" class="table-bordered table-hover" cellspacing="0">
+                    </div>
+
+                  </form>
+                  <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                  <div id="chartContainer1" style="height: 370px; width: 100%;"></div>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+              <!-- general form elements disabled -->
+
+              <!-- /.card -->
+            </div>
+
+            
+            
+            <!--/.col (right) -->
+            <!-- /.card -->
+          </div>
+        </div>
+        <!--/.col (left) -->
+
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+
+  </section>
+  
+  <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+
+
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+  <!-- jQuery -->
+
+  <script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js') }}"></script>
+  <!-- Bootstrap 4 -->
+
+  <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+  <!-- AdminLTE App -->
+  <script src="{{ url_for('static', filename='dist/js/adminlte.min.js') }}"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="{{ url_for('static', filename='dist/js/demo.js') }}"></script>
+
+  <!-- bs-custom-file-input -->
+  <script src="{{ url_for('static', filename='plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
+
+  <!-- Ion Slider -->
+  <script src="{{ url_for('static', filename='plugins/ion-rangeslider/js/ion.rangeSlider.min.js') }}"></script>
+  <!-- Bootstrap slider -->
+  <script src="{{ url_for('static', filename='plugins/bootstrap-slider/bootstrap-slider.min.js') }}"></script>
+  <!-- DataTables -->
+
+  <script src="{{ url_for('static', filename='plugins/datatables/jquery.dataTables.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+  <script
+    src="{{ url_for('static', filename='plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
+  <script
+    src="{{ url_for('static', filename='plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+
+    <!-- ChartJS -->
+<script src="{{ url_for('static', filename='plugins/chart.js/Chart.min.js') }}"></script>
+
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      bsCustomFileInput.init();
+      $('#getsimilarity').click(function () {
+
+        id = "{{item.url}}"
+        str = "/getsimilarity/"
+        link = str.concat(replaceAll(id, "/", "SLASH"))
+
+        $('#example').DataTable({
+
+
+          "ajax": {
+            "url": link, // This now also works
+            "dataType": "json",
+            "dataSrc": "data",
+            "contentType": "application/json"
+          },
+         
+          "columns": [
+            {
+              "title": "id",
+              "data": "0", "visible": false
+            },
+
+            {
+              "title": "url",
+              "data": "1",
+              "visible": false
+            },
+
+            {
+              "title": "nbConnexions",
+              "data": "3"
+            },
+            {
+              "title": "nb projets",
+              "data": "4"
+            },
+            {
+              "title": "Turnover",
+              "data": "5"
+            },
+            {
+              "title": "location",
+              "data": "2"
+            },
+            {
+              "title": "Ingenieur",
+              "data": "14"
+            },
+            {
+              "title": "Licence",
+              "data": "15"
+            },
+            { "title": "Master", "data": "16" },
+
+            { "title": "Docteur", "data": "13" },
+
+
+            { "title": "BTS", "data": "11" },
+
+            { "title": "BTP", "data": "10" },
+            { "title": "Bac", "data": "12" },
+            { "title": "Other", "data": "17" },
+            { "title": "JeuneDip", "data": "6" },
+            { "title": "Sexe", "data": "7" },
+            { "title": "Profil", "data": "9" },
+
+            { "title": "Score", "data": "8" }
+
+
+
+          ],
+          
+            "initComplete": function( settings, json ) {
+            
+             showgraph(json)
+              console.log(json)
+              
+ },
+          "success": function (d) {
+            console.log(d.message);
+           
+
+          },
+          error: function (xhr, textStatus, error) {
+            console.log(xhr.responseText);
+            console.log(xhr.statusText);
+            console.log(textStatus);
+            console.log(error);
+          }
+
+        });
+
+      });
+
+
+    });
+
+    function escapeRegExp(string) {
+      return string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+    }
+    function replaceAll(str, find, replace) {
+      return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+    }
+
+
+
+    $(function () {
+
+
+
+      /* BOOTSTRAP SLIDER */
+      $('.slider').bootstrapSlider()
+
+
+
+      $('#range_5').ionRangeSlider({
+        min: 0,
+        max: 2000,
+        type: 'single',
+        step: 1,
+        postfix: ' ',
+        prettify: false,
+        hasGrid: true
+      })
+
+
+
+    })
+
+
+     //show graphs
+    function showgraph(data) {
+      
+     var s=0
+     for (var i = 0; i < data.data.length; i++) {
+       s=s+data.data[i][8];
+	}
+      // Add dots
+      var dataPoints = []
+      for (var i = 0; i < data.data.length; i++) {
+		dataPoints.push({
+			x: 1/data.data[i][18],
+			y: data.data[i][8]/s
+		});}
+      console.log(data.data[0][18])
+      console.log(dataPoints)
+      console.log()
+      var options =  {
+	animationEnabled: true,
+	theme: "light2",
+	title: {
+		text: "Similarity"
+	},
+	axisX: {
+		valueFormatString: "",
+    
+	},
+	axisY: {
+		title: "Score",
+		titleFontSize: 24,
+		includeZero: false
+	},
+	data: [{
+		type: "scatter", 
+		yValueFormatString: "#,###.##",
+		dataPoints: dataPoints
+	}]
+};
+
+$("#chartContainer").CanvasJSChart(options);
+
+////////////////////////////BAR chart
+var dataPoints1 = []
+      for (var i = 0; i < data.data.length-1; i++) {
+        console.log(i)
+		dataPoints1.push({
+			y: data.data[i][18]*10000,
+			label: "Candidat "+(i+1)
+		});}
+
+
+console.log(dataPoints1)
+var chart = new CanvasJS.Chart("chartContainer1", {
+	animationEnabled: true,
+  responsive: true,
+  theme: "light2", // "light1", "light2", "dark1", "dark2",
+  scales: {
+    
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: false
+          }
+        }
+      ]
+    },
+	title:{
+		text:"Top 10"
+	},
+  axisX:{
+        interval:1
+     },
+	axisY: {
+		title: "Coefficient de similarité",
+    interval: 1000,
+    startValue:5000,
+     endValue:10000,
+   
+	},
+	data: [{
+    type: "column",  
+		showInLegend: true, 
+		legendMarkerColor: "grey",
+		name: "candidats",
+	//	color: "#014D65",
+		dataPoints: dataPoints1
+	}]
+,
+options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: false
+                }
+            }]
+        }
+        }
+});
+chart.render();
+    
+    }
+    
+  </script>
+</body>
+
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | General Form Elements</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/fontawesome-free/css/all.min.css') }}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/adminlte.min.css') }}">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- Ion Slider -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/ion-rangeslider/css/ion.rangeSlider.min.css') }}">
+  <!-- bootstrap slider -->
+  <link rel="stylesheet"
+    href="{{ url_for('static', filename='plugins/bootstrap-slider/css/bootstrap-slider.min.css') }}">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}
+  ">
+  <link rel="stylesheet"
+    href="  {{ url_for('static', filename='plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+</head>
+
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="../../index3.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="#" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <!-- SEARCH FORM -->
+      <form class="form-inline ml-3">
+        <div class="input-group input-group-sm">
+          <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-navbar" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Messages Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-comments"></i>
+            <span class="badge badge-danger navbar-badge">3</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+
+                <img src=" {{ url_for('static', filename='dist/img/user1-128x128.jpg') }}" alt="User Avatar"
+                  class="img-size-50 mr-3 img-circle">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Brad Diesel
+                    <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">Call me whenever you can...</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+
+                <img src="{{ url_for('static', filename='dist/img/user8-128x128.jpg') }}" alt="User Avatar"
+                  class="img-size-50 img-circle mr-3">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    John Pierce
+                    <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">I got your message bro</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+
+                <img src="{{ url_for('static', filename='dist/img/user3-128x128.jpg') }}" alt="User Avatar"
+                  class="img-size-50 img-circle mr-3">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Nora Silvester
+                    <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">The subject goes here</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+          </div>
+        </li>
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-warning navbar-badge">15</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-item dropdown-header">15 Notifications</span>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-envelope mr-2"></i> 4 new messages
+              <span class="float-right text-muted text-sm">3 mins</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-users mr-2"></i> 8 friend requests
+              <span class="float-right text-muted text-sm">12 hours</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-file mr-2"></i> 3 new reports
+              <span class="float-right text-muted text-sm">2 days</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+            <i class="fas fa-th-large"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="../../index3.html" class="brand-link">
+
+        <img src="{{ url_for('static', filename='dist/img/wevioo.png') }}" alt="AdminLTE Logo"
+          class="brand-image img-circle elevation-3" style="opacity: .8">
+          <span class="brand-text font-weight-light">W-sourcing</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+
+            <img src="{{ url_for('static', filename='dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
+              alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Alexander Pierce</a>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item has-treeview">
+              <a href="{{ url_for('index') }}" class="nav-link">
+                <i class="nav-icon fas fa fa-th-list"></i>
+                <p>
+                  List Candidats
+
+                </p>
+              </a>
+
+            </li>
+            <li class="nav-item">
+              <a href="{{url_for('addcandidat')}}" class="nav-link">
+                <i class="nav-icon fas fa-user-plus"></i>
+                <p>
+                  Nouveau Candidat
+
+                </p>
+              </a>
+            </li>
+
+            <li class="nav-item has-treeview">
+              <a href="{{url_for('home')}}" class="nav-link">
+                <i class="nav-icon fas fa-chart-pie"></i>
+                <p>
+                  Charts
+
+                </p>
+              </a>
+
+
+            </li>
+
+
+
+            </li>
+
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Details candidat</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Details</li>
+              </ol>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- left column -->
+            <div class="col-md-6">
+              <!-- general form elements -->
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Candidat</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form role="form">
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">URL</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="{{ item.url }}">
+                    </div>
+                    {%if item.BTS==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="BTS">
+                    </div>
+                    {% elif item.BTP==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="BTP">
+                    </div>
+                    {% elif item.Baccalaureat==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Baccalaureat">
+                    </div>
+                    {% elif item.Licence==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Licence">
+                    </div>
+                    {% elif item.Docteur==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Docteur">
+                    </div>
+                    {% elif item.Ingenieur==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Ingénieur">
+                    </div>
+                    {% elif item.Master==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Master">
+                    </div>
+                    {% elif item.Vide_Degree==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Sans diplome">
+                    </div>
+                    {% else %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Diplome</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Autre">
+                    </div>
+                    {% endif %}
+                    {%if item.Turnover==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Apte à changer de poste</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Oui">
+                    </div>
+                    {% else %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Apte à changer de poste</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Non">
+                    </div>
+                    {% endif %}
+                    {%if item.YoungGraduate==1 %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Jeune Diplomé</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Oui">
+                    </div>
+                    {% else %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Jeune Diplomé</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="Ancien Diplomé">
+                    </div>
+                    {% endif %}
+
+                    <div class="col-3">
+                      <label for="exampleInputEmail1">Nombre de projets</label>
+                      <input type="number" class="form-control" placeholder=".col-3"
+                        value="{{item['nobre de projets']}}">
+                    </div>
+                    {%if item.Gender==1 %}
+                    <div class="col-3">
+                      <label for="exampleInputEmail1">Sexe</label>
+                      <input type="text" class="form-control" placeholder=".col-3" value="Femme">
+                    </div>
+                    {% else %}
+                    <div class="col-3">
+                      <label for="exampleInputEmail1">Sexe</label>
+                      <input type="text" class="form-control" placeholder=".col-3" value="Homme">
+                    </div>
+                    {% endif %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Profil</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                        value="{{item['profil']}}">
+
+                    </div>
+
+                    <div class="col-3">
+                      <label for="exampleInputEmail1">Score</label>
+                      <!--<input type="text" class="form-control" placeholder=".col-3" value="{{item['score']}}"> -->
+                      <input id="range_5" type="text" name="range_5" value="{{item['score']}}">
+                    </div>
+
+                    <div class="row margin">
+                      <div class="col-sm-6">
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <!-- /.card-body -->
+                </form>
+                <div class="card-footer">
+
+                  <button id="getsimilarity" class="btn btn-primary">Show Similarity</button>
+                </div>
+
+
+              </div>
+              <!-- /.card -->
+
+
+
+
+
+            </div>
+
+
+            <!-- right column -->
+            <div class="col-md-6">
+              <!-- general form elements disabled -->
+              <div class="card card-warning">
+                <div class="card-header">
+                  <h3 class="card-title">Les 10 plus proches</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body " style="overflow-x: auto">
+                  <form role="form">
+                    <div class="row">
+                      <table id="example" class="table-bordered table-hover" cellspacing="0">
+                    </div>
+
+                  </form>
+                  <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                  <div id="chartContainer1" style="height: 370px; width: 100%;"></div>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+              <!-- general form elements disabled -->
+
+              <!-- /.card -->
+            </div>
+
+            
+            
+            <!--/.col (right) -->
+            <!-- /.card -->
+          </div>
+        </div>
+        <!--/.col (left) -->
+
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+
+  </section>
+  
+  <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+
+
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+  <!-- jQuery -->
+
+  <script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js') }}"></script>
+  <!-- Bootstrap 4 -->
+
+  <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+  <!-- AdminLTE App -->
+  <script src="{{ url_for('static', filename='dist/js/adminlte.min.js') }}"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="{{ url_for('static', filename='dist/js/demo.js') }}"></script>
+
+  <!-- bs-custom-file-input -->
+  <script src="{{ url_for('static', filename='plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
+
+  <!-- Ion Slider -->
+  <script src="{{ url_for('static', filename='plugins/ion-rangeslider/js/ion.rangeSlider.min.js') }}"></script>
+  <!-- Bootstrap slider -->
+  <script src="{{ url_for('static', filename='plugins/bootstrap-slider/bootstrap-slider.min.js') }}"></script>
+  <!-- DataTables -->
+
+  <script src="{{ url_for('static', filename='plugins/datatables/jquery.dataTables.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+  <script
+    src="{{ url_for('static', filename='plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
+  <script
+    src="{{ url_for('static', filename='plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+
+    <!-- ChartJS -->
+<script src="{{ url_for('static', filename='plugins/chart.js/Chart.min.js') }}"></script>
+
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      bsCustomFileInput.init();
+      $('#getsimilarity').click(function () {
+
+        id = "{{item.url}}"
+        str = "/getsimilarity/"
+        link = str.concat(replaceAll(id, "/", "SLASH"))
+
+        $('#example').DataTable({
+
+
+          "ajax": {
+            "url": link, // This now also works
+            "dataType": "json",
+            "dataSrc": "data",
+            "contentType": "application/json"
+          },
+         
+          "columns": [
+            {
+              "title": "id",
+              "data": "0", "visible": false
+            },
+
+            {
+              "title": "url",
+              "data": "1",
+              "visible": false
+            },
+
+            {
+              "title": "nbConnexions",
+              "data": "3"
+            },
+            {
+              "title": "nb projets",
+              "data": "4"
+            },
+            {
+              "title": "Turnover",
+              "data": "5"
+            },
+            {
+              "title": "location",
+              "data": "2"
+            },
+            {
+              "title": "Ingenieur",
+              "data": "14"
+            },
+            {
+              "title": "Licence",
+              "data": "15"
+            },
+            { "title": "Master", "data": "16" },
+
+            { "title": "Docteur", "data": "13" },
+
+
+            { "title": "BTS", "data": "11" },
+
+            { "title": "BTP", "data": "10" },
+            { "title": "Bac", "data": "12" },
+            { "title": "Other", "data": "17" },
+            { "title": "JeuneDip", "data": "6" },
+            { "title": "Sexe", "data": "7" },
+            { "title": "Profil", "data": "9" },
+
+            { "title": "Score", "data": "8" }
+
+
+
+          ],
+          
+            "initComplete": function( settings, json ) {
+            
+             showgraph(json)
+              console.log(json)
+              
+ },
+          "success": function (d) {
+            console.log(d.message);
+           
+
+          },
+          error: function (xhr, textStatus, error) {
+            console.log(xhr.responseText);
+            console.log(xhr.statusText);
+            console.log(textStatus);
+            console.log(error);
+          }
+
+        });
+
+      });
+
+
+    });
+
+    function escapeRegExp(string) {
+      return string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+    }
+    function replaceAll(str, find, replace) {
+      return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+    }
+
+
+
+    $(function () {
+
+
+
+      /* BOOTSTRAP SLIDER */
+      $('.slider').bootstrapSlider()
+
+
+
+      $('#range_5').ionRangeSlider({
+        min: 0,
+        max: 2000,
+        type: 'single',
+        step: 1,
+        postfix: ' ',
+        prettify: false,
+        hasGrid: true
+      })
+
+
+
+    })
+
+
+     //show graphs
+    function showgraph(data) {
+      
+     var s=0
+     for (var i = 0; i < data.data.length; i++) {
+       s=s+data.data[i][8];
+	}
+      // Add dots
+      var dataPoints = []
+      for (var i = 0; i < data.data.length; i++) {
+		dataPoints.push({
+			x: 1/data.data[i][18],
+			y: data.data[i][8]/s
+		});}
+      console.log(data.data[0][18])
+      console.log(dataPoints)
+      console.log()
+      var options =  {
+	animationEnabled: true,
+	theme: "light2",
+	title: {
+		text: "Similarity"
+	},
+	axisX: {
+		valueFormatString: "",
+    
+	},
+	axisY: {
+		title: "Score",
+		titleFontSize: 24,
+		includeZero: false
+	},
+	data: [{
+		type: "scatter", 
+		yValueFormatString: "#,###.##",
+		dataPoints: dataPoints
+	}]
+};
+
+$("#chartContainer").CanvasJSChart(options);
+
+////////////////////////////BAR chart
+var dataPoints1 = []
+      for (var i = 0; i < data.data.length-1; i++) {
+        console.log(i)
+		dataPoints1.push({
+			y: data.data[i][18]*10000,
+			label: "Candidat "+(i+1)
+		});}
+
+
+console.log(dataPoints1)
+var chart = new CanvasJS.Chart("chartContainer1", {
+	animationEnabled: true,
+  responsive: true,
+  theme: "light2", // "light1", "light2", "dark1", "dark2",
+  scales: {
+    
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: false
+          }
+        }
+      ]
+    },
+	title:{
+		text:"Top 10"
+	},
+  axisX:{
+        interval:1
+     },
+	axisY: {
+		title: "Coefficient de similarité",
+    interval: 1000,
+    startValue:5000,
+     endValue:10000,
+   
+	},
+	data: [{
+    type: "column",  
+		showInLegend: true, 
+		legendMarkerColor: "grey",
+		name: "candidats",
+	//	color: "#014D65",
+		dataPoints: dataPoints1
+	}]
+,
+options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: false
+                }
+            }]
+        }
+        }
+});
+chart.render();
+    
+    }
+    
+  </script>
+</body>
+
+</html>
