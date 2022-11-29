@@ -10,4 +10,4 @@ classification application for profiles of resumes database already created from
 LinkedIn) to speed up the HR recruitment process and propose relevant CVs according to the profile research.
 
 According to IBM master plan methodology, a data science project begins with the most important chapter which is business understanding; doing the plan and strategy to respond to our main goals and meet the expectation of having significant results. Then, we have data collection, data understanding and data preparation in order to be ready for the modeling step. After modeling we have to evaluate our model before deployment of our application.</br>
-<img src="/images/1.png" alt="Alt text" title="Optional title">
+<img src="/images/1.png" alt="Alt text" title="Optional title" position="center">
